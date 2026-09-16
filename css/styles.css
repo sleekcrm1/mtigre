@@ -5,8 +5,12 @@
     --brazil-green: #009B3A;
 }
 
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
 body.dark {
-    background-color: #111827;
+    background-color: #0a0a0a;
     color: #ffffff;
 }
 
@@ -26,6 +30,7 @@ html {
     scroll-behavior: smooth;
 }
 
+/* ANIMATIONS */
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -97,4 +102,82 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+}
+
+/* MOBILE MENU STYLES */
+#mobileMenu {
+    box-shadow: -4px 0 8px rgba(0, 0, 0, 0.15);
+}
+
+#mobileMenuOverlay {
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Instagram Embed Responsive */
+.instagram-media {
+    margin: 0 auto !important;
+}
+
+/* Color Alignment with ABADÁ Logo */
+a {
+    transition: color 0.3s ease;
+}
+
+button {
+    transition: all 0.3s ease;
+}
+
+/* Dark Mode Color Adjustments */
+body.dark a {
+    color: var(--capoeira-gold);
+}
+
+body.dark button {
+    transition: all 0.3s ease;
+}
+
+/* Tailwind Overrides for Brand Colors */
+.text-red-700 {
+    color: var(--capoeira-red) !important;
+}
+
+.bg-red-700 {
+    background-color: var(--capoeira-red) !important;
+}
+
+.border-red-700 {
+    border-color: var(--capoeira-red) !important;
+}
+
+.hover\:text-yellow-400:hover {
+    color: var(--capoeira-gold) !important;
+}
+
+/* Mobile Floating Buttons */
+.floating-btn {
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.floating-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.floating-btn:active {
+    transform: scale(0.95);
+}
+
+/* Language Selector Dropdown */
+.group {
+    position: relative;
+}
+
+.group:hover .group-hover\:flex {
+    display: flex !important;
 }

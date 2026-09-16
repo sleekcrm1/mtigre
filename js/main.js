@@ -9,6 +9,23 @@ if (localStorage.getItem('darkMode') === 'true') {
     document.getElementById('body').classList.add('dark');
 }
 
+// Mobile menu toggle
+function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    const overlay = document.getElementById('mobileMenuOverlay');
+    
+    menu.classList.toggle('translate-x-full');
+    overlay.classList.toggle('hidden');
+}
+
+// Close menu when clicking overlay
+document.addEventListener('DOMContentLoaded', function() {
+    const overlay = document.getElementById('mobileMenuOverlay');
+    if (overlay) {
+        overlay.addEventListener('click', toggleMobileMenu);
+    }
+});
+
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -16,6 +33,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
             target.scrollIntoView({ behavior: 'smooth' });
+            // Close mobile menu if open
+            if (!document.getElementById('mobileMenu').classList.contains('translate-x-full')) {
+                toggleMobileMenu();
+            }
         }
     });
 });
@@ -28,5 +49,10 @@ document.addEventListener('DOMContentLoaded', function() {
             easing: 'ease-in-out-quad',
             once: false
         });
+    }
+    
+    // Instagram embed reload
+    if (window.instgrm) {
+        window.instgrm.Embeds.process();
     }
 });

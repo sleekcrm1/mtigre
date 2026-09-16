@@ -7,23 +7,87 @@
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- Instagram Embed Script -->
+    <script async src="https://www.instagram.com/embed.js"></script>
 </head>
 <body class="bg-white text-gray-900" id="body">
 
-<!-- Navigation -->
+<!-- Mobile Menu Overlay -->
+<div id="mobileMenuOverlay" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden transition-opacity" onclick="toggleMobileMenu()"></div>
+
+<!-- Mobile Sliding Menu -->
+<nav id="mobileMenu" class="fixed top-0 right-0 h-screen w-64 bg-white dark:bg-gray-800 shadow-lg transform translate-x-full transition-transform z-40 md:hidden">
+    <div class="p-6">
+        <button onclick="toggleMobileMenu()" class="text-2xl float-right mb-8">✕</button>
+        <div class="clear-both">
+            <div class="mb-8 text-center">
+                <div class="text-3xl font-bold" style="color: var(--capoeira-red); letter-spacing: 2px;">ABADÁ</div>
+                <p class="text-sm" style="color: var(--capoeira-gold);">Capoeira Belgique</p>
+            </div>
+            
+            <div class="space-y-4">
+                <a href="#courses" onclick="toggleMobileMenu()" class="block px-4 py-2 rounded" style="color: var(--capoeira-red); border-left: 3px solid var(--capoeira-red); padding-left: 12px;">
+                    <strong data-i18n="nav.courses">Cours</strong>
+                </a>
+                <a href="#mestre" onclick="toggleMobileMenu()" class="block px-4 py-2 rounded dark:text-gray-300" style="border-left: 3px solid transparent; padding-left: 12px;">
+                    <strong data-i18n="nav.mestre">Mestre Tigre</strong>
+                </a>
+                <a href="#about" onclick="toggleMobileMenu()" class="block px-4 py-2 rounded dark:text-gray-300" style="border-left: 3px solid transparent; padding-left: 12px;">
+                    <strong data-i18n="nav.about">À Propos</strong>
+                </a>
+                <a href="#instagram" onclick="toggleMobileMenu()" class="block px-4 py-2 rounded dark:text-gray-300" style="border-left: 3px solid transparent; padding-left: 12px;">
+                    <strong data-i18n="nav.instagram">Instagram</strong>
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Desktop Navigation -->
 <nav class="sticky top-0 z-40 bg-white dark:bg-gray-800 shadow-md nav-sticky hidden md:block">
     <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <div class="text-2xl font-bold animate-fadeInUp" style="color: var(--capoeira-red);">ABADÁ</div>
+        <div class="text-2xl font-bold" style="color: var(--capoeira-red); letter-spacing: 2px;">ABADÁ</div>
+        <div class="flex gap-8 items-center">
+            <a href="#courses" class="text-gray-700 dark:text-gray-300 hover:font-bold transition" data-i18n="nav.courses">Cours</a>
+            <a href="#mestre" class="text-gray-700 dark:text-gray-300 hover:font-bold transition" data-i18n="nav.mestre">Mestre Tigre</a>
+            <a href="#about" class="text-gray-700 dark:text-gray-300 hover:font-bold transition" data-i18n="nav.about">À Propos</a>
+            <a href="#instagram" class="text-gray-700 dark:text-gray-300 hover:font-bold transition" data-i18n="nav.instagram">Instagram</a>
+        </div>
         <div class="flex gap-4">
-            <select onchange="setLanguage(this.value)" class="px-3 py-2 rounded bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600">
-                <option value="fr">FR</option>
-                <option value="en">EN</option>
-                <option value="pt">PT</option>
+            <select onchange="setLanguage(this.value)" class="px-3 py-2 rounded bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 text-sm">
+                <option value="fr">🇫🇷 FR</option>
+                <option value="en">🇬🇧 EN</option>
+                <option value="pt">🇧🇷 PT</option>
             </select>
             <button onclick="toggleDarkMode()" class="text-2xl hover:scale-110 transition">🌙</button>
         </div>
     </div>
 </nav>
+
+<!-- Mobile Floating Buttons -->
+<div class="fixed bottom-6 left-6 right-6 md:hidden z-50 flex justify-between gap-2">
+    <!-- Language Selector -->
+    <div class="relative group">
+        <button class="text-white font-bold py-3 px-3 rounded-full text-lg hover:scale-110 transition" style="background: var(--capoeira-red);">
+            🌐
+        </button>
+        <div class="hidden group-hover:flex absolute bottom-full left-0 flex-col gap-2 mb-2">
+            <button onclick="setLanguage('fr')" class="px-4 py-2 rounded text-white font-bold text-sm" style="background: var(--capoeira-red);">🇫🇷 FR</button>
+            <button onclick="setLanguage('en')" class="px-4 py-2 rounded text-white font-bold text-sm" style="background: var(--capoeira-red);">🇬🇧 EN</button>
+            <button onclick="setLanguage('pt')" class="px-4 py-2 rounded text-white font-bold text-sm" style="background: var(--capoeira-red);">🇧🇷 PT</button>
+        </div>
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <button onclick="toggleDarkMode()" class="text-white font-bold py-3 px-3 rounded-full text-lg hover:scale-110 transition" style="background: var(--capoeira-gold); color: var(--capoeira-dark);">
+        🌙
+    </button>
+
+    <!-- Hamburger Menu -->
+    <button onclick="toggleMobileMenu()" class="text-white font-bold py-3 px-3 rounded-full text-lg hover:scale-110 transition" style="background: var(--capoeira-dark);">
+        ☰
+    </button>
+</div>
 
 <!-- Hero Section -->
 <section class="hero min-h-screen flex items-center justify-center text-white relative overflow-hidden" id="hero" style="background: linear-gradient(135deg, rgba(196, 30, 58, 0.8) 0%, rgba(26, 26, 26, 0.85) 100%), url('https://www-static.capoeirabelgique.be/wp-content/uploads/2022/10/Capoeira_matin-148-_68A8941-Grand-edited.jpeg'); background-size: cover; background-attachment: fixed; background-position: center;">
@@ -33,10 +97,10 @@
     </div>
     
     <div class="text-center relative z-10" data-aos="fade-up" data-aos-duration="1000">
-        <h1 class="text-6xl md:text-8xl font-bold mb-6 animate-fadeInUp" style="letter-spacing: 8px;" data-i18n="hero.title">ABADÁ</h1>
+        <div class="text-5xl md:text-7xl font-bold mb-4 animate-fadeInUp" style="letter-spacing: 8px; color: #FFFFFF;">ABADÁ</div>
         <p class="text-2xl md:text-4xl mb-8 animate-fadeInUp" style="animation-delay: 0.2s;" data-i18n="hero.subtitle">Capoeira Belgique</p>
         <p class="text-lg md:text-2xl mb-12 animate-fadeInUp" style="color: var(--capoeira-gold); animation-delay: 0.4s;" data-i18n="hero.tagline">Avec Mestre Tigre</p>
-        <button class="bg-white text-red-700 font-bold py-4 px-8 rounded-lg text-lg hover:bg-gray-100 transition transform hover:scale-105 animate-fadeInUp" style="animation-delay: 0.6s;" data-i18n="hero.cta">
+        <button class="text-red-700 font-bold py-4 px-8 rounded-lg text-lg hover:opacity-90 transition transform hover:scale-105 animate-fadeInUp" style="background: white; animation-delay: 0.6s;" data-i18n="hero.cta">
             Rejoignez-nous
         </button>
     </div>
@@ -155,6 +219,11 @@
     <div class="max-w-6xl mx-auto px-4">
         <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 animate-slideInLeft" style="color: var(--capoeira-red);" data-i18n="instagram.title">Retrouvez-nous sur Instagram</h2>
         
+        <!-- Official Instagram Embed -->
+        <div class="flex justify-center mb-12">
+            <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/capoeira_abada_belgique/" data-instgrm-version="14" style="background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
+        </div>
+        
         <div class="text-center">
             <a href="https://www.instagram.com/capoeira_abada_belgique/" target="_blank" class="inline-block text-white font-bold py-4 px-8 rounded-lg text-lg hover:opacity-90 transition transform hover:scale-105" style="background: var(--capoeira-red);" data-i18n="instagram.cta">
                 Suivre sur Instagram →
@@ -185,7 +254,7 @@
     <div class="max-w-6xl mx-auto px-4">
         <div class="grid md:grid-cols-4 gap-8 mb-8">
             <div data-aos="fade-up" data-aos-delay="100">
-                <h3 class="text-2xl font-bold mb-4" style="color: var(--capoeira-gold);">ABADÁ</h3>
+                <h3 class="text-2xl font-bold mb-4" style="color: var(--capoeira-gold); letter-spacing: 2px;">ABADÁ</h3>
                 <p class="text-gray-400">Capoeira Belgique avec Mestre Tigre</p>
             </div>
             <div data-aos="fade-up" data-aos-delay="200">
@@ -196,6 +265,8 @@
             <div data-aos="fade-up" data-aos-delay="300">
                 <h4 class="font-bold mb-4" style="color: var(--capoeira-gold);" data-i18n="footer.social">Réseaux</h4>
                 <a href="https://www.instagram.com/capoeira_abada_belgique/" target="_blank" class="text-gray-400 hover:text-yellow-400 transition">Instagram</a>
+                <br>
+                <a href="https://www.facebook.com/abadacapoeirabelgique" target="_blank" class="text-gray-400 hover:text-yellow-400 transition">Facebook</a>
             </div>
         </div>
         
