@@ -26,9 +26,9 @@ jobs:
         with:
           azure_static_web_apps_api_token: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_ICY_GLACIER_0C04C5B10 }}
           action: "upload"
-          app_location: "/" 
-          api_location: "" 
-          output_location: "" 
+          app_location: "/dist"          # Update to your build output directory
+          api_location: "api"            # If you have an API
+          output_location: "build"       # Specify where built files are located
           skip_app_build: true
 
   close_pull_request_job:
