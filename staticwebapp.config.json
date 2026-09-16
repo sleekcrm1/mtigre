@@ -4,6 +4,7 @@
   },
   "globalHeaders": [
     {
+      "match": "/*",
       "headers": {
         "Cache-Control": "max-age=3600"
       }
