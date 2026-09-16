@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "home": "Início",
+    "courses": "Aulas",
+    "mestre": "Mestre Tigre",
+    "about": "Sobre",
+    "contact": "Contato"
+  },
+  "hero": {
+    "title": "ABADÁ",
+    "subtitle": "Capoeira Bélgica",
+    "tagline": "Com Mestre Tigre",
+    "cta": "Junte-se a Nós"
+  },
+  "courses": {
+    "title": "Nossas Aulas",
+    "auderghem": {
+      "name": "Gymnasium Auderghem",
+      "address": "Boulevard des Invalides 216, 1160 Auderghem",
+      "schedule": "Segunda 20:15–21:45",
+      "level": "Todos os níveis"
+    },
+    "woluwe": {
+      "name": "Sportcity Woluwe",
+      "address": "Avenue Salomé 2, 1150 WSP",
+      "schedule": "Qua/Sex/Dom",
+      "children": "Quarta 16:00–18:00 (crianças)",
+      "adults": "Sexta 20:00–22:00 (adultos)",
+      "all": "Domingo 10:00–12:00 (todos)"
+    },
+    "etterbeek": {
+      "name": "Centro Desportivo Etterbeek",
+      "address": "Rue des Champs 71, 1040 Etterbeek",
+      "schedule": "Quinta 16:30–19:30",
+      "level": "Todos os níveis"
+    }
+  },
+  "mestre": {
+    "title": "Mestre Tigre",
+    "bio": "Francisco Alves, conhecido como Mestre Tigre, é um dos maiores mestres de capoeira da Europa.",
+    "stats": {
+      "experience": "Anos de Experiência",
+      "students_israel": "Alunos em Israel",
+      "teaching_spain": "Ensino na Espanha",
+      "brussels": "Bruxelas - Bélgica"
+    }
+  },
+  "about": {
+    "title": "O que é Capoeira?",
+    "description": "Capoeira é uma arte marcial brasileira criada por escravos africanos no século XVI. É uma combinação única de dança, combate e acrobacias com movimentos fluidos e poderosos. Rica em história, música tradicional brasileira e uma comunidade global, a capoeira melhora flexibilidade, força, coordenação e autoconfiança."
+  },
+  "instagram": {
+    "title": "Encontre-nos no Instagram",
+    "cta": "Siga no Instagram →"
+  },
+  "cta": {
+    "title": "Junte-se a Nós!",
+    "subtitle": "Comece sua jornada de capoeira hoje",
+    "email": "📧 Email",
+    "phone": "📞 Chamar"
+  },
+  "footer": {
+    "copyright": "© 2025 ABADÁ Capoeira Bélgica. Todos os direitos reservados.",
+    "contact": "Contato",
+    "social": "Redes Sociais"
+  }
+}

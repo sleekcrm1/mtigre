@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ABADÁ Capoeira Belgique - Mestre Tigre</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+</head>
+<body class="bg-white text-gray-900" id="body">
+
+<!-- Navigation -->
+<nav class="sticky top-0 z-40 bg-white dark:bg-gray-800 shadow-md nav-sticky hidden md:block">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold animate-fadeInUp" style="color: var(--capoeira-red);">ABADÁ</div>
+        <div class="flex gap-4">
+            <select onchange="setLanguage(this.value)" class="px-3 py-2 rounded bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600">
+                <option value="fr">FR</option>
+                <option value="en">EN</option>
+                <option value="pt">PT</option>
+            </select>
+            <button onclick="toggleDarkMode()" class="text-2xl hover:scale-110 transition">🌙</button>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero min-h-screen flex items-center justify-center text-white relative overflow-hidden" id="hero" style="background: linear-gradient(135deg, rgba(196, 30, 58, 0.8) 0%, rgba(26, 26, 26, 0.85) 100%), url('https://www-static.capoeirabelgique.be/wp-content/uploads/2022/10/Capoeira_matin-148-_68A8941-Grand-edited.jpeg'); background-size: cover; background-attachment: fixed; background-position: center;">
+    <div class="absolute inset-0 opacity-20">
+        <div class="absolute top-10 right-10 w-72 h-72 bg-yellow-400 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-10 left-10 w-72 h-72 bg-green-600 rounded-full blur-3xl"></div>
+    </div>
+    
+    <div class="text-center relative z-10" data-aos="fade-up" data-aos-duration="1000">
+        <h1 class="text-6xl md:text-8xl font-bold mb-6 animate-fadeInUp" style="letter-spacing: 8px;" data-i18n="hero.title">ABADÁ</h1>
+        <p class="text-2xl md:text-4xl mb-8 animate-fadeInUp" style="animation-delay: 0.2s;" data-i18n="hero.subtitle">Capoeira Belgique</p>
+        <p class="text-lg md:text-2xl mb-12 animate-fadeInUp" style="color: var(--capoeira-gold); animation-delay: 0.4s;" data-i18n="hero.tagline">Avec Mestre Tigre</p>
+        <button class="bg-white text-red-700 font-bold py-4 px-8 rounded-lg text-lg hover:bg-gray-100 transition transform hover:scale-105 animate-fadeInUp" style="animation-delay: 0.6s;" data-i18n="hero.cta">
+            Rejoignez-nous
+        </button>
+    </div>
+    
+    <!-- Scroll indicator -->
+    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+    </div>
+</section>
+
+<!-- Courses Section -->
+<section class="py-20 bg-white dark:bg-gray-900" data-aos="fade-up" id="courses">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 animate-slideInLeft" style="color: var(--capoeira-red);" data-i18n="courses.title">Nos Cours</h2>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Auderghem -->
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-lg border-2 overflow-hidden card-hover" style="border-color: var(--capoeira-red);" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="http://www.capoeirabelgique.be/wp-content/uploads/2016/09/gymnasium.jpg" alt="Gymnasium Auderghem" class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-4" style="color: var(--capoeira-red);" data-i18n="courses.auderghem.name">Gymnasium Auderghem</h3>
+                    <p class="mb-3 text-gray-700 dark:text-gray-300"><strong>📍</strong> <span data-i18n="courses.auderghem.address">Boulevard des Invalides 216, 1160 Auderghem</span></p>
+                    <p class="text-gray-700 dark:text-gray-300"><strong>⏰</strong> <span data-i18n="courses.auderghem.schedule">Lundi 20:15–21:45</span></p>
+                </div>
+            </div>
+
+            <!-- Woluwe -->
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-lg border-2 overflow-hidden card-hover" style="border-color: var(--capoeira-red);" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="http://www.capoeirabelgique.be/wp-content/uploads/2016/09/sportcity.jpg" alt="Sportcity Woluwe" class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-4" style="color: var(--capoeira-red);" data-i18n="courses.woluwe.name">Sportcity Woluwe</h3>
+                    <p class="mb-3 text-gray-700 dark:text-gray-300"><strong>📍</strong> <span data-i18n="courses.woluwe.address">Avenue Salomé 2, 1150 WSP</span></p>
+                    <p class="text-gray-700 dark:text-gray-300"><strong>⏰</strong> <span data-i18n="courses.woluwe.schedule">Mer/Ven/Dim</span></p>
+                </div>
+            </div>
+
+            <!-- Etterbeek -->
+            <div class="bg-gray-50 dark:bg-gray-800 rounded-lg border-2 overflow-hidden card-hover" style="border-color: var(--capoeira-red);" data-aos="fade-up" data-aos-delay="300">
+                <div class="relative h-48 overflow-hidden">
+                    <img src="http://www.capoeirabelgique.be/wp-content/uploads/2015/04/Centresportif114-940x626.jpg" alt="Centre Sportif Etterbeek" class="w-full h-full object-cover transform hover:scale-110 transition duration-300">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-2xl font-bold mb-4" style="color: var(--capoeira-red);" data-i18n="courses.etterbeek.name">Centre Sportif Etterbeek</h3>
+                    <p class="mb-3 text-gray-700 dark:text-gray-300"><strong>📍</strong> <span data-i18n="courses.etterbeek.address">Rue des Champs 71, 1040 Etterbeek</span></p>
+                    <p class="text-gray-700 dark:text-gray-300"><strong>⏰</strong> <span data-i18n="courses.etterbeek.schedule">Jeudi 16:30–19:30</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mestre Tigre Section -->
+<section class="py-20" style="background: var(--capoeira-dark); color: white;" id="mestre">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="slide-right" data-aos-duration="1000">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 animate-slideInLeft" style="color: var(--capoeira-gold);" data-i18n="mestre.title">Mestre Tigre</h2>
+                <p class="text-lg mb-8" data-i18n="mestre.bio">Francisco Alves, connu sous le nom de Mestre Tigre, est l'un des plus grands maîtres de capoeira en Europe.</p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 p-4 rounded-lg bg-gray-800 transform hover:translate-x-2 transition" data-aos="fade-left" data-aos-delay="100">
+                        <div>
+                            <p class="text-2xl font-bold" style="color: var(--capoeira-gold);">25+</p>
+                            <p class="text-gray-300" data-i18n="mestre.stats.experience">Années d'expérience</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 rounded-lg bg-gray-800 transform hover:translate-x-2 transition" data-aos="fade-left" data-aos-delay="200">
+                        <div>
+                            <p class="text-2xl font-bold" style="color: var(--capoeira-gold);">350+</p>
+                            <p class="text-gray-300" data-i18n="mestre.stats.students_israel">Étudiants en Israël</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 rounded-lg bg-gray-800 transform hover:translate-x-2 transition" data-aos="fade-left" data-aos-delay="300">
+                        <div>
+                            <p class="text-2xl font-bold" style="color: var(--capoeira-gold);">2006-2013</p>
+                            <p class="text-gray-300" data-i18n="mestre.stats.teaching_spain">Enseignement en Espagne</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4 p-4 rounded-lg bg-gray-800 transform hover:translate-x-2 transition" data-aos="fade-left" data-aos-delay="400">
+                        <div>
+                            <p class="text-2xl font-bold" style="color: var(--capoeira-gold);">2013+</p>
+                            <p class="text-gray-300" data-i18n="mestre.stats.brussels">Bruxelles - Belgique</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div data-aos="slide-left" data-aos-duration="1000" class="animate-float">
+                <img src="https://www-static.capoeirabelgique.be/wp-content/uploads/2022/10/Capoeira_pm-64-IMG_0600-Grand-940x627.jpeg" alt="Mestre Tigre" class="w-full rounded-lg" style="border: 3px solid var(--capoeira-gold);">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Capoeira Info Section -->
+<section class="py-20 bg-white dark:bg-gray-900" data-aos="fade-up" id="about">
+    <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 animate-fadeInUp" style="color: var(--capoeira-red);" data-i18n="about.title">Qu'est-ce que la Capoeira?</h2>
+        
+        <div class="bg-gray-50 dark:bg-gray-800 p-8 rounded-lg transform hover:scale-105 transition" data-aos="zoom-in">
+            <p class="text-lg md:text-xl text-gray-800 dark:text-gray-200 leading-relaxed" data-i18n="about.description">
+                La capoeira est un art martial brésilien créé par des esclaves africains au 16e siècle. C'est une combinaison unique de danse, de combat et d'acrobatie avec des mouvements fluides et puissants. Riche d'histoire, de musique traditionnelle brésilienne et d'une communauté mondiale, la capoeira améliore la flexibilité, force, coordination et confiance en soi.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Instagram Section -->
+<section class="py-20 bg-gray-50 dark:bg-gray-800" data-aos="fade-up" id="instagram">
+    <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center mb-12 animate-slideInLeft" style="color: var(--capoeira-red);" data-i18n="instagram.title">Retrouvez-nous sur Instagram</h2>
+        
+        <div class="text-center">
+            <a href="https://www.instagram.com/capoeira_abada_belgique/" target="_blank" class="inline-block text-white font-bold py-4 px-8 rounded-lg text-lg hover:opacity-90 transition transform hover:scale-105" style="background: var(--capoeira-red);" data-i18n="instagram.cta">
+                Suivre sur Instagram →
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20" style="background: linear-gradient(90deg, var(--capoeira-red) 0%, var(--capoeira-gold) 100%);" data-aos="fade-up" id="cta">
+    <div class="max-w-4xl mx-auto px-4 text-center text-white">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 animate-fadeInUp" data-i18n="cta.title">Rejoignez-nous!</h2>
+        <p class="text-lg md:text-xl mb-12 animate-fadeInUp" style="animation-delay: 0.2s;" data-i18n="cta.subtitle">Commencez votre voyage capoeira aujourd'hui</p>
+        
+        <div class="grid md:grid-cols-2 gap-8">
+            <a href="mailto:info@capoeirabelgique.be" class="bg-white text-red-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition text-lg transform hover:scale-105" data-aos="fade-right" data-i18n="cta.email">
+                📧 Email
+            </a>
+            <a href="tel:+3248314175" class="bg-gray-900 text-yellow-400 font-bold py-4 px-8 rounded-lg hover:bg-black transition text-lg transform hover:scale-105" data-aos="fade-left" data-i18n="cta.phone">
+                📞 Appeler
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer style="background: var(--capoeira-dark); color: white;" class="py-12">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+            <div data-aos="fade-up" data-aos-delay="100">
+                <h3 class="text-2xl font-bold mb-4" style="color: var(--capoeira-gold);">ABADÁ</h3>
+                <p class="text-gray-400">Capoeira Belgique avec Mestre Tigre</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <h4 class="font-bold mb-4" style="color: var(--capoeira-gold);" data-i18n="footer.contact">Contact</h4>
+                <p class="text-gray-400">info@capoeirabelgique.be</p>
+                <p class="text-gray-400">+32 483 14 17 58</p>
+            </div>
+            <div data-aos="fade-up" data-aos-delay="300">
+                <h4 class="font-bold mb-4" style="color: var(--capoeira-gold);" data-i18n="footer.social">Réseaux</h4>
+                <a href="https://www.instagram.com/capoeira_abada_belgique/" target="_blank" class="text-gray-400 hover:text-yellow-400 transition">Instagram</a>
+            </div>
+        </div>
+        
+        <div class="border-t border-gray-700 pt-8 text-center text-gray-400 text-sm">
+            <p data-i18n="footer.copyright">© 2025 ABADÁ Capoeira Belgique. Tous droits réservés.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="./js/i18n.js"></script>
+<script src="./js/main.js"></script>
+
+</body>
+</html>

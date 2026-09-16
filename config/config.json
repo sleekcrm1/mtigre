@@ -1,0 +1,18 @@
+{
+  "site": {
+    "title": "ABADÁ Capoeira Belgique",
+    "description": "Capoeira classes with Mestre Tigre in Brussels",
+    "languages": ["fr", "en", "pt"],
+    "defaultLanguage": "fr"
+  },
+  "contact": {
+    "email": "info@capoeirabelgique.be",
+    "phone": "+32 483 14 17 58",
+    "instagram": "@capoeira_abada_belgique",
+    "facebook": "@abadacapoeirabelgique"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/capoeira_abada_belgique/",
+    "facebook": "https://www.facebook.com/abadacapoeirabelgique"
+  }
+}

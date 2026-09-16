@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "home": "Home",
+    "courses": "Courses",
+    "mestre": "Mestre Tigre",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "ABADÁ",
+    "subtitle": "Capoeira Belgium",
+    "tagline": "With Mestre Tigre",
+    "cta": "Join Us"
+  },
+  "courses": {
+    "title": "Our Classes",
+    "auderghem": {
+      "name": "Gymnasium Auderghem",
+      "address": "Boulevard des Invalides 216, 1160 Auderghem",
+      "schedule": "Monday 20:15–21:45",
+      "level": "All levels"
+    },
+    "woluwe": {
+      "name": "Sportcity Woluwe",
+      "address": "Avenue Salomé 2, 1150 WSP",
+      "schedule": "Wed/Fri/Sun",
+      "children": "Wednesday 16:00–18:00 (children)",
+      "adults": "Friday 20:00–22:00 (adults)",
+      "all": "Sunday 10:00–12:00 (all ages)"
+    },
+    "etterbeek": {
+      "name": "Etterbeek Sports Centre",
+      "address": "Rue des Champs 71, 1040 Etterbeek",
+      "schedule": "Thursday 16:30–19:30",
+      "level": "All levels"
+    }
+  },
+  "mestre": {
+    "title": "Mestre Tigre",
+    "bio": "Francisco Alves, known as Mestre Tigre, is one of the greatest capoeira masters in Europe.",
+    "stats": {
+      "experience": "Years of Experience",
+      "students_israel": "Students in Israel",
+      "teaching_spain": "Teaching in Spain",
+      "brussels": "Brussels - Belgium"
+    }
+  },
+  "about": {
+    "title": "What is Capoeira?",
+    "description": "Capoeira is a Brazilian martial art created by African slaves in the 16th century. It is a unique combination of dance, combat, and acrobatics with fluid and powerful movements. Rich in history, traditional Brazilian music, and a global community, capoeira improves flexibility, strength, coordination, and self-confidence."
+  },
+  "instagram": {
+    "title": "Find Us on Instagram",
+    "cta": "Follow on Instagram →"
+  },
+  "cta": {
+    "title": "Join Us!",
+    "subtitle": "Start your capoeira journey today",
+    "email": "📧 Email",
+    "phone": "📞 Call"
+  },
+  "footer": {
+    "copyright": "© 2025 ABADÁ Capoeira Belgium. All rights reserved.",
+    "contact": "Contact",
+    "social": "Social Media"
+  }
+}
